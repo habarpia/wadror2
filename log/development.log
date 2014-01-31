@@ -11437,3 +11437,233 @@ Processing by BreweriesController#index as HTML
   [1m[35mCACHE (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
   [1m[36mCACHE (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
 Completed 200 OK in 77ms (Views: 71.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/ratings/new" for 127.0.0.1 at 2014-01-31 16:31:47 +0200
+Processing by RatingsController#new as HTML
+  [1m[35mBeer Load (1.0ms)[0m  SELECT "beers".* FROM "beers"
+  [1m[36mBrewery Load (0.8ms)[0m  [1mSELECT "breweries".* FROM "breweries" WHERE "breweries"."id" = ? ORDER BY "breweries"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "breweries".* FROM "breweries" WHERE "breweries"."id" = ? ORDER BY "breweries"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mBrewery Load (0.4ms)[0m  [1mSELECT "breweries".* FROM "breweries" WHERE "breweries"."id" = ? ORDER BY "breweries"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "breweries".* FROM "breweries" WHERE "breweries"."id" = ? ORDER BY "breweries"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mBrewery Load (0.6ms)[0m  [1mSELECT "breweries".* FROM "breweries" WHERE "breweries"."id" = ? ORDER BY "breweries"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "breweries".* FROM "breweries" WHERE "breweries"."id" = ? ORDER BY "breweries"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mBrewery Load (0.4ms)[0m  [1mSELECT "breweries".* FROM "breweries" WHERE "breweries"."id" = ? ORDER BY "breweries"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "breweries".* FROM "breweries" WHERE "breweries"."id" = ? ORDER BY "breweries"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "breweries".* FROM "breweries" WHERE "breweries"."id" = ? ORDER BY "breweries"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered ratings/new.html.erb within layouts/application (331.5ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 200 OK in 461ms (Views: 372.9ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-01-31 16:31:50 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  Rendered users/show.html.erb within layouts/application (4.3ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 200 OK in 57ms (Views: 50.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/beers" for 127.0.0.1 at 2014-01-31 16:31:53 +0200
+Processing by BeersController#index as HTML
+  [1m[36mBeer Load (1.5ms)[0m  [1mSELECT "beers".* FROM "beers"[0m
+  [1m[35mBrewery Load (0.5ms)[0m  SELECT "breweries".* FROM "breweries" WHERE "breweries"."id" = ? ORDER BY "breweries"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "breweries".* FROM "breweries" WHERE "breweries"."id" = ? ORDER BY "breweries"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mBrewery Load (0.4ms)[0m  SELECT "breweries".* FROM "breweries" WHERE "breweries"."id" = ? ORDER BY "breweries"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "breweries".* FROM "breweries" WHERE "breweries"."id" = ? ORDER BY "breweries"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mBrewery Load (0.6ms)[0m  SELECT "breweries".* FROM "breweries" WHERE "breweries"."id" = ? ORDER BY "breweries"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "breweries".* FROM "breweries" WHERE "breweries"."id" = ? ORDER BY "breweries"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mBrewery Load (0.8ms)[0m  SELECT "breweries".* FROM "breweries" WHERE "breweries"."id" = ? ORDER BY "breweries"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "breweries".* FROM "breweries" WHERE "breweries"."id" = ? ORDER BY "breweries"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "breweries".* FROM "breweries" WHERE "breweries"."id" = ? ORDER BY "breweries"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered beers/index.html.erb within layouts/application (79.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 130ms (Views: 120.5ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-01-31 16:35:35 +0200
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (16.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 66ms (Views: 61.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/breweries" for 127.0.0.1 at 2014-01-31 16:35:41 +0200
+Processing by BreweriesController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "breweries"
+  [1m[36mBrewery Load (0.6ms)[0m  [1mSELECT "breweries".* FROM "breweries"[0m
+  Rendered breweries/index.html.erb within layouts/application (22.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 200 OK in 166ms (Views: 162.3ms | ActiveRecord: 1.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddUserIdToRatings (20140131143653)
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddUserIdToRatings (20140131143653)
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddUserIdToRatings (20140131143653)
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20140131143653"]]
+  [1m[35m (159.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRating Load (7.9ms)[0m  SELECT "ratings".* FROM "ratings" WHERE "ratings"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" = 'testi'[0m
+  [1m[35mRating Load (0.9ms)[0m  SELECT "ratings".* FROM "ratings" ORDER BY "ratings"."id" ASC LIMIT 1
+  [1m[36mRating Load (1.5ms)[0m  [1mSELECT "ratings".* FROM "ratings"[0m
+  [1m[35mRating Load (1.4ms)[0m  SELECT "ratings".* FROM "ratings"
+  [1m[36mRating Load (0.8ms)[0m  [1mSELECT "ratings".* FROM "ratings" ORDER BY "ratings"."id" ASC LIMIT 1[0m
+
+
+Started GET "/breweries" for 127.0.0.1 at 2014-01-31 16:46:17 +0200
+Processing by BreweriesController#index as HTML
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "breweries"[0m
+  [1m[35mBrewery Load (0.7ms)[0m  SELECT "breweries".* FROM "breweries"
+  Rendered breweries/index.html.erb within layouts/application (59.3ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 191ms (Views: 150.9ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-31 16:46:17 +0200
+
+
+Started GET "/assets/beers.css?body=1" for 127.0.0.1 at 2014-01-31 16:46:17 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-31 16:46:17 +0200
+
+
+Started GET "/assets/breweries.css?body=1" for 127.0.0.1 at 2014-01-31 16:46:17 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-31 16:46:17 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-01-31 16:46:17 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-31 16:46:17 +0200
+
+
+Started GET "/assets/beers.js?body=1" for 127.0.0.1 at 2014-01-31 16:46:17 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-31 16:46:17 +0200
+
+
+Started GET "/assets/breweries.js?body=1" for 127.0.0.1 at 2014-01-31 16:46:17 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-01-31 16:46:18 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-31 16:46:18 +0200
+  [1m[36mRating Load (0.8ms)[0m  [1mSELECT "ratings".* FROM "ratings" ORDER BY "ratings"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRating Load (92.4ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE "ratings"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.7ms)[0m  begin transaction
+  [1m[36mSQL (5.3ms)[0m  [1mUPDATE "ratings" SET "user_id" = ?, "updated_at" = ? WHERE "ratings"."id" = 1[0m  [["user_id", 1], ["updated_at", Fri, 31 Jan 2014 14:47:34 UTC +00:00]]
+  [1m[35m (185.2ms)[0m  commit transaction
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-01-31 16:48:00 +0200
+  [1m[35mActiveRecord::SchemaMigration Load (0.6ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  Rendered users/show.html.erb within layouts/application (2.2ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 200 OK in 62ms (Views: 49.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/ratings" for 127.0.0.1 at 2014-01-31 16:50:05 +0200
+Processing by RatingsController#index as HTML
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "ratings"[0m
+  [1m[35mRating Load (1.5ms)[0m  SELECT "ratings".* FROM "ratings"
+  [1m[36mBeer Load (0.9ms)[0m  [1mSELECT "beers".* FROM "beers" WHERE "beers"."id" = ? ORDER BY "beers"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "beers".* FROM "beers" WHERE "beers"."id" = ? ORDER BY "beers"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "beers".* FROM "beers" WHERE "beers"."id" = ? ORDER BY "beers"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mBeer Load (0.5ms)[0m  SELECT "beers".* FROM "beers" WHERE "beers"."id" = ? ORDER BY "beers"."id" ASC LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "beers".* FROM "beers" WHERE "beers"."id" = ? ORDER BY "beers"."id" ASC LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "beers".* FROM "beers" WHERE "beers"."id" = ? ORDER BY "beers"."id" ASC LIMIT 1  [["id", 9]]
+  [1m[36mBeer Load (0.5ms)[0m  [1mSELECT "beers".* FROM "beers" WHERE "beers"."id" = ? ORDER BY "beers"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.2ms)[0m  SELECT "beers".* FROM "beers" WHERE "beers"."id" = ? ORDER BY "beers"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mBeer Load (0.6ms)[0m  [1mSELECT "beers".* FROM "beers" WHERE "beers"."id" = ? ORDER BY "beers"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "beers".* FROM "beers" WHERE "beers"."id" = ? ORDER BY "beers"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mBeer Load (0.4ms)[0m  [1mSELECT "beers".* FROM "beers" WHERE "beers"."id" = ? ORDER BY "beers"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mBeer Load (0.4ms)[0m  SELECT "beers".* FROM "beers" WHERE "beers"."id" = ? ORDER BY "beers"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "beers".* FROM "beers" WHERE "beers"."id" = ? ORDER BY "beers"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "beers".* FROM "beers" WHERE "beers"."id" = ? ORDER BY "beers"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "beers".* FROM "beers" WHERE "beers"."id" = ? ORDER BY "beers"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.2ms)[0m  SELECT "beers".* FROM "beers" WHERE "beers"."id" = ? ORDER BY "beers"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered ratings/index.html.erb within layouts/application (199.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 263ms (Views: 239.0ms | ActiveRecord: 11.0ms)
+  [1m[36mRating Load (1.5ms)[0m  [1mSELECT "ratings".* FROM "ratings"[0m
+  [1m[35mRating Load (1.4ms)[0m  SELECT "ratings".* FROM "ratings"
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  UPDATE "ratings" SET "user_id" = ?, "updated_at" = ? WHERE "ratings"."id" = 2  [["user_id", 1], ["updated_at", Fri, 31 Jan 2014 14:50:35 UTC +00:00]]
+  [1m[36m (155.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mUPDATE "ratings" SET "user_id" = ?, "updated_at" = ? WHERE "ratings"."id" = 3[0m  [["user_id", 1], ["updated_at", Fri, 31 Jan 2014 14:50:35 UTC +00:00]]
+  [1m[35m (161.3ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  UPDATE "ratings" SET "user_id" = ?, "updated_at" = ? WHERE "ratings"."id" = 4  [["user_id", 1], ["updated_at", Fri, 31 Jan 2014 14:50:35 UTC +00:00]]
+  [1m[36m (172.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "ratings" SET "user_id" = ?, "updated_at" = ? WHERE "ratings"."id" = 5[0m  [["user_id", 1], ["updated_at", Fri, 31 Jan 2014 14:50:35 UTC +00:00]]
+  [1m[35m (173.3ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  UPDATE "ratings" SET "user_id" = ?, "updated_at" = ? WHERE "ratings"."id" = 6  [["user_id", 1], ["updated_at", Fri, 31 Jan 2014 14:50:35 UTC +00:00]]
+  [1m[36m (161.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "ratings" SET "user_id" = ?, "updated_at" = ? WHERE "ratings"."id" = 7[0m  [["user_id", 1], ["updated_at", Fri, 31 Jan 2014 14:50:36 UTC +00:00]]
+  [1m[35m (162.1ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  UPDATE "ratings" SET "user_id" = ?, "updated_at" = ? WHERE "ratings"."id" = 8  [["user_id", 1], ["updated_at", Fri, 31 Jan 2014 14:50:36 UTC +00:00]]
+  [1m[36m (150.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mUPDATE "ratings" SET "user_id" = ?, "updated_at" = ? WHERE "ratings"."id" = 9[0m  [["user_id", 1], ["updated_at", Fri, 31 Jan 2014 14:50:36 UTC +00:00]]
+  [1m[35m (228.7ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  UPDATE "ratings" SET "user_id" = ?, "updated_at" = ? WHERE "ratings"."id" = 10  [["user_id", 1], ["updated_at", Fri, 31 Jan 2014 14:50:36 UTC +00:00]]
+  [1m[36m (172.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mUPDATE "ratings" SET "user_id" = ?, "updated_at" = ? WHERE "ratings"."id" = 11[0m  [["user_id", 1], ["updated_at", Fri, 31 Jan 2014 14:50:36 UTC +00:00]]
+  [1m[35m (172.7ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  UPDATE "ratings" SET "user_id" = ?, "updated_at" = ? WHERE "ratings"."id" = 13  [["user_id", 1], ["updated_at", Fri, 31 Jan 2014 14:50:36 UTC +00:00]]
+  [1m[36m (184.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mUPDATE "ratings" SET "user_id" = ?, "updated_at" = ? WHERE "ratings"."id" = 14[0m  [["user_id", 1], ["updated_at", Fri, 31 Jan 2014 14:50:37 UTC +00:00]]
+  [1m[35m (162.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "ratings" SET "user_id" = ?, "updated_at" = ? WHERE "ratings"."id" = 18  [["user_id", 1], ["updated_at", Fri, 31 Jan 2014 14:50:37 UTC +00:00]]
+  [1m[36m (184.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mUPDATE "ratings" SET "user_id" = ?, "updated_at" = ? WHERE "ratings"."id" = 19[0m  [["user_id", 1], ["updated_at", Fri, 31 Jan 2014 14:50:37 UTC +00:00]]
+  [1m[35m (183.3ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "ratings" SET "user_id" = ?, "updated_at" = ? WHERE "ratings"."id" = 20  [["user_id", 1], ["updated_at", Fri, 31 Jan 2014 14:50:37 UTC +00:00]]
+  [1m[36m (173.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."user_id" = ?  [["user_id", 1]]
+  [1m[36mRating Load (1.0ms)[0m  [1mSELECT "ratings".* FROM "ratings" WHERE (1)[0m
