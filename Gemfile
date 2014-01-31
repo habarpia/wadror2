@@ -47,6 +47,8 @@ end
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
+gem 'therubyracer', platforms: :ruby
+
 # Use debugger
 gem 'debugger', group: [:development, :test]
 gem 'byebug', group: [:development, :test]
